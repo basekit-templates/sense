@@ -1,0 +1,29 @@
+<!-- Template Widgets -->
+
+<div class="flex-container">
+
+    <div class="tablet-top-bar"></div>
+    <div class="flex-item flex-social">
+        {{widget('socialicons', 'socialnetworks', {
+        'googleplus': 'https://plus.google.com/101946323226233111530',
+        'linkedin':'http://www.linkedin.com/company/mycompanyname',
+        'facebook': 'https://www.facebook.com/mycompanyname',
+        'twitter': 'https://twitter.com/mycompanyname',
+        'youtube': 'https://www.youtube.com/user/mycompanyname',
+        'rss': 'http://news.bbc.co.uk/1/hi/help/rss/default.stm'
+        })|raw}}
+    </div>
+    <div class="flex-item flex-nav">
+        {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
+    </div>
+    <div class="tablet-spacing"></div>
+    <div class="flex-item flex-logo">
+        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+    </div>
+    <div class="flex-item flex-companyname">
+        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+    </div>
+
+</div>
+
+<!-- End Template Widgets -->

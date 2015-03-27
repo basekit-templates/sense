@@ -1,0 +1,16 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+        <!-- Blog posts list Widget -->
+
+        {{widget('blogpostlist', 'allblogposts', {})|raw}}
+
+        <!-- Main Widget Zone -->
+
+        {{zone('main')|raw}}
+
+{% endblock %}
+
+
+
