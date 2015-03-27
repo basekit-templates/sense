@@ -2,13 +2,25 @@
 
 {% block content %}
 
+    <div class="home-container">
         <!-- Blog posts list Widget -->
-
         {{widget('blogpostlist', 'allblogposts', {})|raw}}
+    </div>
 
-        <!-- Main Widget Zone -->
+    <!-- Container -->
+    <div class="container">
 
-        {{zone('main')|raw}}
+        <!-- Page Content -->
+        <section class="template-content">
+
+            <!-- Main Widget Zone -->
+            {{zone('main')|raw}}
+
+        </section>
+        <!-- End Page Content -->
+
+    </div>
+    <!-- End Container -->
 
 {% endblock %}
 

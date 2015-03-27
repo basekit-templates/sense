@@ -2,5 +2,172 @@
 // blog
 // ----
 
-// blog
-//...
+.home-container {
+    padding: 0 50px 50px;
+}
+
+// ---------------
+// Blog Posts List
+// ---------------
+
+.blogpostlist {
+    .post-article {
+        float: left;
+        padding: 0 12px 24px;
+        height: auto;
+        width: 25%;
+        @media only screen and (max-width : 1024px) {
+            width: 33.33%;
+        }
+        @media only screen and (max-width : 900px) {
+            width: 50%;
+        }
+        @media @mobile {
+            padding: 0 0 24px;
+            width: 100%;
+        }
+    }
+    .post-image,
+    .post-content,
+    .post-footer {
+        background-color: @color-swatch7;
+    }
+    .post-content {
+        margin: 0;
+    }
+    .post-title .title-link {
+        color: @color-swatch4;
+        &:hover {
+            color: @color-swatch2;
+            text-decoration: none;
+        }
+    }
+    .post-header,
+    .post-excerpt p {
+        padding: 0 20px;
+    }
+    .read-more {
+        padding: 20px;
+        float: left;
+        width: 100%;
+        position: relative;
+        color: @font-swatch2-color;
+        font-family: @font-swatch2-font-family;
+        &:hover {
+            color: @color-swatch2;
+            text-decoration: none;
+        }
+        &:after {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 58px;
+            height: 58px;
+            overflow: visible;
+            line-height: 60px;
+            font-family: 'FontAwesome', sans-serif;
+            content: "\f067";
+            font-size: 18px;
+            text-align: center;
+            color: @color-swatch2;
+            background-color: @color-swatch7;
+            .transition( all, 0.5s, ease );
+        }
+        &:hover:after {
+            right: 0;
+            bottom: 0;
+            width: 58px;
+            height: 58px;
+            color: @color-swatch7;
+            background-color: @color-swatch2;
+            .transition( all, 0.5s, ease );
+        }
+    }
+    .post-footer .timestamp {
+        margin: 0;
+        padding: 20px 20px 10px;
+    }
+
+    // Flexbox to change content order
+    .post-article {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-pack: start;
+        -moz-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-align-content: space-between;
+        -ms-flex-line-pack: justify;
+        align-content: space-between;
+        -webkit-box-align: stretch;
+        -moz-box-align: stretch;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+    }
+    .post-image,
+    .post-content,
+    .post-footer {
+        -webkit-box-flex: 0;
+        -moz-box-flex: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+    }
+    .post-image {
+        -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+    }
+    .post-content {
+        -webkit-box-ordinal-group: 3;
+        -moz-box-ordinal-group: 3;
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+    .post-footer {
+        -webkit-box-ordinal-group: 2;
+        -moz-box-ordinal-group: 2;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+
+    // Blog images
+    .image-link {
+        overflow: hidden;
+        max-height: 250px;
+        @media @mobile {
+            max-height: 200px;
+        }
+        .image {
+            margin: 0 auto;
+            height: auto;
+            max-height: none;
+        }
+    }
+} // End Blogpostlist
+
+
+
+
