@@ -177,6 +177,11 @@
             color: @color-swatch7;
         }
     }
+    @media @mobile {
+        .social-item {
+            margin-right: 0;
+        }
+    }
 }
 
 .social-name {
@@ -185,9 +190,6 @@
 
 .social-item {
     margin-right: 0;
-    @media @mobile {
-        margin-right: 0;
-    }
 }
 
 .social-link {
@@ -394,11 +396,12 @@
 // Fix overlay in editor on tablet and mobile
 
 div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
-    width: 30%;
-    left: inherit;
-    top: -44px;
-    height: 44px;
-    bottom: inherit;
+    @media @tablet {
+        width: 30%;
+        height: 44px;
+        top: -44px !important;
+        left: inherit !important;
+    }
 }
 
 
