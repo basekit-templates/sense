@@ -26,17 +26,17 @@
     {% include basekit.headScript %}
 </head>
 
-<body class="{{ page.backgroundClass }}">
+<body class="{{ page.backgroundClass }} {% block class %}{% endblock %}">
 
     <!-- Header Include -->
     {% include "includes/header.twig" %}
 
-                    <!-- Main Widget Zone -->
-                    {% block content %}
-                    {% endblock %}
+        <!-- Main Widget Zone -->
+        {% block content %}
+        {% endblock %}
 
-                    <!-- Footer Include -->
-                    {% include "includes/footer.twig" %}
+        <!-- Footer Include -->
+        {% include "includes/footer.twig" %}
 
     {% include basekit.bodyScript %}
 

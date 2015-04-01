@@ -55,7 +55,7 @@
         order: 0;
     }
     // Reorder items for desktop
-    @media only screen and (min-width : 768px) {
+    @media only screen and (min-width : 770px) {
         &.flex-social {
             -webkit-box-ordinal-group: 5;
             -moz-box-ordinal-group: 5;
@@ -109,6 +109,20 @@
         .navigation-toggle {
             height: 44px;
         }
+    }
+}
+
+
+
+
+// ------------------
+// Default Page
+// ------------------
+
+.bk-pt-default .flex-container {
+    border-bottom: 1px solid darken(@color-swatch1, 8%);
+    @media @tablet {
+        padding: 0 0 30px;
     }
 }
 
@@ -223,7 +237,7 @@
 // Selected nav item
 
 .navigation-item.selected > .item-name {
-    color: @font-swatch6-color-hover;
+    color: @color-swatch2;
     @media @tablet {
         color: lighten(@color-swatch4, 40%);
     }

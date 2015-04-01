@@ -5,4 +5,263 @@
 // Menu sections widget
 // --------------------
 
-//...
+.menusections-body {
+    padding-top: 20px;
+    text-align: center;
+    @media only screen and (max-width: 550px) {
+        padding-top: 0;
+    }
+}
+
+.menusections-list {
+    display: table;
+    width: 100%;
+    margin: 0;
+}
+
+.menusections-item {
+    display: inline-block;
+    padding-right: 0;
+    margin-right: 10px;
+    a {
+        font-family: @font-swatch6-font-family;
+        color: @color-swatch3;
+        font-size: @font-swatch6-font-size;
+        font-weight: @font-swatch6-font-weight;
+        line-height: @font-swatch6-line-height;
+        &:hover {
+            color: @color-swatch2;
+            text-decoration: none;
+        }
+    }
+    @media only screen and (max-width: 550px) {
+        padding: 15px 0 10px 0;
+        width: 100%;
+        border-bottom: 1px solid darken(@color-swatch1,7%);
+    }
+    &:last-child {
+        margin-right: 0;
+        @media only screen and (max-width: 550px) {
+            border-bottom: 1px solid darken(@color-swatch1,7%);
+        }
+    }
+    // Dash after menu item
+    &:after {
+        content: '\2044';
+        padding-left: 8px;
+        color: darken(@color-swatch1, 10%);
+        @media only screen and (max-width: 550px) {
+            content: '';
+            padding-left: 0;
+        }
+    }
+        // No dash for last menu item
+    &:last-child:after {
+        content: '';
+        padding-left: 0;
+    }
+}
+
+
+
+
+// Menu
+// -------------
+
+.menu-items:not(.menu-section--subsection),
+.menu-list {
+    column-gap: 30px;
+    -moz-column-gap: 30px;
+    -webkit-column-gap: 30px;
+    @media only screen and (max-width: 600px) {
+        column-count: 1;
+        column-gap: 0;
+        -moz-column-count: 1;
+        -moz-column-gap: 0;
+        -webkit-column-count: 1;
+        -webkit-column-gap: 0;
+    }
+}
+
+.menu-item {
+    width: 100%;
+}
+
+.section-header {
+    padding: 25px 0 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid darken(@color-swatch1, 8%);
+    .section-title {
+        display: inline-block;
+    }
+}
+
+.menu .item-article {
+    margin: 6px;
+    background-color: @color-swatch7;
+    -webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.15);
+    -moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.15);
+    box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.15);
+}
+
+.item-content {
+  margin-top: 0;
+  padding-top: 40px;
+}
+
+.item-header {
+    padding: 0 20px 0;
+    position: relative;
+    .item-title {
+        padding-top: 10px;
+    }
+}
+
+.item-description.menu__item-description {
+  padding: 10px 20px;
+}
+
+.item-price {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    height: 40px;
+    padding: 5px 10px;
+    background-color: darken(@color-swatch7, 3%);
+    font-family: @font-swatch3-font-family;
+    color: @font-swatch3-color;
+    font-weight: @font-swatch3-font-weight;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.item-footer {
+    background-color: lighten(@color-swatch1, 3%);
+    padding: 20px;
+}
+
+// Dietary icons
+.dietary-item.icon:not(.icon--not-spicy) {
+    &:before {
+        content: "\2713";
+        margin-right: 0;
+        color: @color-swatch2;
+    }
+}
+
+// Images
+// --------
+.menu .item-image .image-link,
+.menu .menu-item--featured .item-image .image-link {
+    background-color: @color-swatch7;
+    height: auto;
+    line-height: normal;
+    max-height: 350px;
+}
+
+.menu .item-image,
+.menu .menu-item--featured .item-image {
+    .image {
+        width: 100%;
+        height: auto;
+        max-height: none;
+    }
+}
+
+.item-image + .item-content {
+    padding-top: 20px;
+}
+
+.item-image + .item-content .item-price {
+    top: -60px;
+}
+
+
+// Featured item
+// ----------------
+.menu-item--featured {
+    padding: 0;
+    position: relative;
+}
+
+.menu-item--featured .item-price {
+    padding-right: 50px;
+    border-bottom: 1px solid darken(@color-swatch7, 8%);
+    border-left: 1px solid darken(@color-swatch7, 8%);
+    &:before {
+        content: "\2665";
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 28px;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: darken(@color-swatch1, 40%);
+        color: #f5ce1a;
+    }
+}
+
+.menu-item--featured,
+.menu-section--featured {
+    background-color: transparent;
+}
+
+// Featured subsection
+// --------------------
+
+.menu-section--featured {
+    position: relative;
+    padding: 0;
+    .section-header {
+        padding-top: 50px;
+        padding-bottom: 20px;
+        margin-top: 20px;
+    }
+    .section-header:before {
+        content: "\2665";
+        position: absolute;
+        top: 0;
+        right: 50%;
+        margin-right: -20px;
+        font-size: 28px;
+        height: 40px;
+        width: 40px;
+        line-height: 48px;
+        -webkit-border-radius: 200px;
+        -moz-border-radius: 200px;
+        border-radius: 200px;
+        text-align: center;
+        background-color: darken(@color-swatch1, 40%);
+        color: #FFD40D;
+    }
+}
+
+.section-description,
+.section-subtitle {
+    font-family: @font-swatch5-font-family;
+    color: @font-swatch5-color;
+    font-size: @font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height: @font-swatch5-line-height;
+}
+
+// Standard Subsection
+// --------------------
+
+.menu-section--subsection .section-header {
+    padding-bottom: 20px;
+}
+
+// Section Note
+// -------------
+
+.section-note {
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
