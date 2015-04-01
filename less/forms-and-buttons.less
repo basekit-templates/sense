@@ -81,6 +81,115 @@
     }
 }
 
+// Legends and labels
+// ----------------------------
+
+.legend,
+.label {
+    font-family: @font-swatch3-font-family;
+    color: @font-swatch3-color;
+    letter-spacing: @font-swatch3-letter-spacing;
+}
+
+.legend {
+    font-size: @font-swatch3-font-size;
+    font-weight: @font-swatch3-font-weight;
+    line-height: @font-swatch3-line-height;
+    color: @font-swatch3-color;
+    margin-bottom: 20px;
+}
+
+.contactform,
+.signupform {
+    .legend {
+        margin-left: 45px;
+        &:before {
+            content: "\F003";
+            font-family: 'FontAwesome', sans-serif;
+            position: absolute;
+            top: -3px;
+            left: 0;
+            font-size: 16px;
+            height: 38px;
+            width: 38px;
+            line-height: 40px;
+            text-align: center;
+            background-color: @font-swatch3-color;
+            color: #ffffff;
+        }
+    }
+}
+
+.blogsearch .legend {
+    margin-left: 45px;
+    &:before {
+        content: "\F002";
+        font-family: 'FontAwesome', sans-serif;
+        position: absolute;
+        top: -2px;
+        left: 0;
+        font-size: 16px;
+        height: 38px;
+        width: 38px;
+        line-height: 40px;
+        text-align: center;
+        background-color: @font-swatch3-color;
+        color: #ffffff;
+    }
+}
+
+.label {
+    color: @font-swatch3-color;
+    font-size: bkscale(@font-swatch3-font-size,0.7);
+    line-height: bkscale(@font-swatch3-line-height,0.7);
+}
+
+// Hide Blog Label
+.blogsearch {
+    .label {
+        display: none;
+    }
+}
+
+
+// Profile Widget Form in Footer
+// -----------------------------
+
+.template-footer .profile .signupform {
+    .form-body {
+        margin: 0 auto;
+    }
+    .legend {
+        margin: 0 auto 10px;
+        position: relative;
+        &:before {
+            display: none;
+            padding-left: 0;
+        }
+    }
+    .label {
+        display: none;
+    }
+    .form-group:first-child {
+        padding-left: 44px;
+        position: relative;
+        &:before {
+            content: "\F003";
+            font-family: 'FontAwesome', sans-serif;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 16px;
+            height: 44px;
+            width: 44px;
+            line-height: 42px;
+            text-align: center;
+            border: 1px solid #dddddd;
+            background-color: darken(@color-swatch1, 2%);
+            color: @color-swatch4;
+        }
+    }
+}
 
 
 // Signup Form and Blog Search on Desktop & Tablet
