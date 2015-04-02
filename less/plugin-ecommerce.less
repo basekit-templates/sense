@@ -53,6 +53,9 @@
     position: relative;
     width: 32%;
     margin-bottom: 20px;
+            -webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.15);
+        -moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.15);
+        box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.15);
     // Display 100% at mobile
     @media @mobile {
         width: 100%;
@@ -121,7 +124,6 @@
 }
 
 // Products list in Responsive Columns
-// -----------------------------------
 
 // Two Columns
 .columns-two-left,
@@ -160,6 +162,215 @@
         width: 100%;
     }
 }
+
+
+// Product Widget
+// -----------------
+
+.ecomproduct {
+    float: left;
+    height: auto;
+    width: 100%;
+    background-color: @color-swatch7;
+    -webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.15);
+    -moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.15);
+    box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.15);
+    margin: 40px 0 60px;
+    @media @mobile {
+        margin: 0;
+    }
+}
+.product-article {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    @media only screen and (max-width: 700px) {
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+.product-images,
+.product-content {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+}
+@media only screen and (max-width: 850px) {
+    .product-images {
+        -webkit-flex: 0 0 40%;
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+    }
+    .product-content {
+        -webkit-flex: 0 0 60%;
+        -ms-flex: 0 0 60%;
+        flex: 0 0 60%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .product-images,
+    .product-content {
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    }
+}
+
+// Product images
+
+.product-images {
+    float: left;
+    margin:0;
+    padding: 30px;
+    .image-link {
+        height: auto;
+        background-color: transparent;
+        background-image: none !important;
+    }
+    .image {
+        display: block;
+        vertical-align: top;
+        max-height: 600px;
+        @media only screen and (max-width: 700px) {
+            max-height: 250px;
+        }
+        @media @mobile {
+            max-height: 150px;
+        }
+    }
+}
+
+.product-gallery {
+    margin: 20px 0 0;
+    text-align: left;
+}
+
+.product-gallery .gallery-item {
+    margin-bottom: 3px;
+}
+
+// Product Content
+
+.product-content {
+    background-color: darken(@color-swatch7, 3%);
+    padding: 30px;
+    @media only screen and (min-width: 900px) {
+        display: inline-block;
+    }
+}
+
+// Product Options
+
+.product-actions {
+    display: inline-block;
+    margin: 40px 0;
+    width: 100%;
+}
+.product-actions .form {
+    legend {
+        padding: 0;
+        color: @color-swatch4;
+        background-color: transparent;
+    }
+    .form-body {
+        padding: 0;
+    }
+    .form-group {
+        margin: 20px 0;
+    }
+    select {
+        width: 100%;
+    }
+    .button {
+        float: left;
+        width: 48%;
+        padding: 8px;
+        @media only screen and (max-width: 450px) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    @media @mobile {
+        background-color: transparent;
+    }
+}
+
+// Categories and Tags
+
+.product-attributes {
+    display: inline-block;
+    width: 100%;
+}
+
+// View Basquet Button
+
+.view-basket-wrap .button {
+    float: right;
+    width: 48%;
+    padding: 8px;
+    text-align: center;
+    background-color: @font-swatch7-background-color-hover;
+    &:hover {
+        background-color: @font-swatch7-background-color;
+    }
+    @media only screen and (max-width: 450px) {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Basket widget
