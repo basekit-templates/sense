@@ -112,18 +112,28 @@
     }
 }
 
+// Spacing for logo and company name on tablet and mobile
 
+@media @tablet {
+    .flex-nav+.flex-logo,
+    .flex-nav+.flex-companyname {
+        margin-top: 30px;
+    }
+    .flex-logo+.default-header-bottom-line,
+    .flex-companyname+.default-header-bottom-line {
+        margin-top: 30px;
+    }
+}
 
 
 // ------------------
 // Default Page
 // ------------------
 
-.bk-pt-default .flex-container {
-    border-bottom: 1px solid darken(@color-swatch1, 8%);
-    @media @tablet {
-        padding: 0 0 30px;
-    }
+.bk-pt-default .default-header-bottom-line {
+    height: 1px;
+    width: 100%;
+    background-color: darken(@color-swatch1, 8%);
 }
 
 
@@ -423,15 +433,5 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
     color: @color-swatch2;
     text-decoration: none;
 }
-
-
-// --------------
-// Tablet Spacing
-// --------------
-
-.tablet-spacing {
-    height: 30px;
-}
-
 
 

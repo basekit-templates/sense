@@ -3,7 +3,7 @@
     "widgetVersion":2,
     "thumbnail": "thumbnail.png",
     "screenshot": "thumbnail.png",
-    "templateType":"standard",
+    "templateType":"blog",
     "pageTypes": ["home"],
     "tags": {
     "en": ["blog", "minimal", "clean", "bright", "multipurpose", "simple", "contemporary", "flexible", "modern", "photography"],
