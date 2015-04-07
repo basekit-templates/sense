@@ -236,6 +236,7 @@
     .post-article {
         float: left;
         height: auto;
+        width: 100%;
         background-color: @color-swatch7;
         -webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.15);
         -moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.15);
@@ -315,6 +316,16 @@
             padding: 20px 0 10px;
             font-size: bkscale(@font-swatch1-font-size,0.8);
             line-height: bkscale(@font-swatch1-line-height,0.8);
+        }
+    }
+    // Images
+    .post-image .image {
+        max-height: 600px;
+        @media @tablet {
+            max-height: 400px;
+        }
+        @media @mobile {
+            max-height: 250px;
         }
     }
 }
