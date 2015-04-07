@@ -2,6 +2,8 @@
 // ecommerce
 // ---------
 
+
+// -------------------
 // Product list widget
 // -------------------
 
@@ -53,9 +55,9 @@
     position: relative;
     width: 32%;
     margin-bottom: 20px;
-            -webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.15);
-        -moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.15);
-        box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.15);
+    -webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.15);
+    -moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.15);
+    box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.15);
     // Display 100% at mobile
     @media @mobile {
         width: 100%;
@@ -164,6 +166,7 @@
 }
 
 
+// -----------------
 // Product Widget
 // -----------------
 
@@ -178,6 +181,10 @@
     margin: 40px 0 60px;
     @media @mobile {
         margin: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow:    none;
+        box-shadow:         none;
+        background-color: transparent;
     }
 }
 .product-article {
@@ -262,6 +269,11 @@
     float: left;
     margin:0;
     padding: 30px;
+    @media @mobile {
+        padding: 10px;
+        margin-bottom: 20px;
+        background-color: @color-swatch7;
+    }
     .image-link {
         height: auto;
         background-color: transparent;
@@ -283,6 +295,9 @@
 .product-gallery {
     margin: 20px 0 0;
     text-align: left;
+    @media @mobile {
+        margin: 10px 0 0;
+    }
 }
 
 .product-gallery .gallery-item {
@@ -297,6 +312,10 @@
     @media only screen and (min-width: 900px) {
         display: inline-block;
     }
+    @media @mobile {
+        padding: 0;
+        background-color: transparent;
+    }
 }
 
 // Product Options
@@ -305,18 +324,42 @@
     display: inline-block;
     margin: 40px 0;
     width: 100%;
+    @media @mobile {
+        margin: 20px 0 0;
+    }
 }
 .product-actions .form {
+    &:first-child {
+        @media @mobile {
+            margin-bottom: 20px;
+            background-color: darken(@color-swatch7, 3%);
+            .fieldset {
+                display: inline-block;
+                width: 100%;
+            }
+        }
+    }
     legend {
         padding: 0;
         color: @color-swatch4;
         background-color: transparent;
+        margin-bottom: 10px;
+        @media @mobile {
+            padding: 10px;
+            margin: 0;
+        }
     }
     .form-body {
         padding: 0;
+        @media @mobile {
+            padding: 0 10px;
+        }
     }
     .form-group {
-        margin: 20px 0;
+        margin: 30px 0;
+        @media @mobile {
+            margin: 0 0 20px;
+        }
     }
     select {
         width: 100%;
@@ -325,9 +368,10 @@
         float: left;
         width: 48%;
         padding: 8px;
-        @media only screen and (max-width: 450px) {
+        @media @mobile {
             width: 100%;
             margin-bottom: 20px;
+            margin-top: 20px;
         }
     }
     @media @mobile {
@@ -335,11 +379,15 @@
     }
 }
 
+
 // Categories and Tags
 
 .product-attributes {
     display: inline-block;
     width: 100%;
+    .product-category {
+        margin-bottom: 10px;
+    }
 }
 
 // View Basquet Button
@@ -353,7 +401,7 @@
     &:hover {
         background-color: @font-swatch7-background-color;
     }
-    @media only screen and (max-width: 450px) {
+    @media @mobile {
         width: 100%;
         margin-bottom: 20px;
     }
@@ -364,67 +412,182 @@
 
 
 
+// -----------------------------
+// 3. #Basket Widget
+// -----------------------------
 
-
-
-
-
-
-
-
-
-// Basket widget
-// -------------
-
-// Contents of basket
-.basket-body {
-    max-width: 400px;
-    @media @mobile {
-        max-width: 100%;
-    }
+.basket-item {
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom: 1px solid darken(@color-swatch1, 8%);
 }
 
-// Image & Details positioning
+.item-image  { width: 200px; }
+
+// Display basket image and content inline
+
 .basket-item-image,
 .basket-item-details {
     display: inline-block;
     vertical-align: top;
-}
-
-// Basket item positioning
-.basket-item-image {
-    width: 20%;
-    margin-right: 5%;
-    @media @mobile {
+    margin-right: 20px;
+    @media @tablet {
         width: 100%;
         margin-right: 0;
     }
 }
 
-// Basket item details positioning
-.basket-item-details {
-    width: 73%;
-    @media @mobile {
-        width: 100%;
-    }
-}
+// Item Remove Button
 
-// Basket item name positioning
-.basket-item-name {
-    display: block;
-    max-width: 90%;
-    line-height: @font-swatch5-line-height;
-    @media @mobile {
-        width: 100%;
-    }
-}
-
-// Remove Button
 .item-remove {
+    width: auto;
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 9999;
+    // Remove icon spacing
+    &:before {
+        margin-right: 0;
+    }
 }
+// Hide button text
+
 .remove-text {
-    display: none; // Hides remove text
+    display: none;
+}
+
+// Basket Image
+
+.basket .image {
+    max-height: 200px;
+    max-width: 200px;
+    @media @mobile {
+        max-height: inherit;
+    }
+}
+
+// Quantity Field
+
+.quantity-field {
+    background: transparent;
+    padding: 0 10px;
+}
+
+.quantity-wrap {
+    .button--quantity {
+        width: 22px;
+        height: 22px;
+        margin: 0;
+        line-height: 0;
+    }
+    // button rounded corners
+    .quantity-minus {
+        -webkit-border-radius: 3px 0 0 3px;
+        -moz-border-radius: 3px 0 0 3px;
+        border-radius: 3px 0 0 3px;
+    }
+    .quantity-plus {
+        -webkit-border-radius: 0 3px 3px 0;
+        -moz-border-radius: 0 3px 3px 0;
+        border-radius: 0 3px 3px 0;
+    }
+    // increase button size for mobile
+    @media @mobile {
+        max-width: 50%;
+        .quantity-field {
+            height: 40px;
+            padding: 9px;
+
+        }
+        .button--quantity {
+            margin: 0;
+            width: 25%;
+            height: 40px;
+        }
+    }
+}
+
+// Basket Total
+
+.basket-total {
+    padding-bottom: 20px;
+    border-bottom: 1px solid darken(@color-swatch1, 8%);
+}
+
+// View Basket Button
+
+.view-basket {
+    margin: 20px 0;
+}
+
+// -----------------------------
+// 4. #Basket Summary
+// -----------------------------
+
+
+.order-total,
+.summary-item-total {
+    padding: 16px 0;
+    text-align: right;
+    @media @mobile {
+        text-align: left;
+    }
+}
+
+.summary-table {
+    border: none;
+    @media @mobile {
+        border: 1px solid darken(@color-swatch1, 10%);
+    }
+    width: 100%;
+    th,
+    td {
+        border: 1px solid darken(@color-swatch1, 5%);
+    }
+    tr:last-child td {
+        border: none;
+        padding: 10px 0;
+        @media @mobile {
+            padding: 10px 12px;
+        }
+    }
+}
+
+.ecombasketsummary .summary-title {
+    margin: 40px 0;
+}
+
+.summary-table .cell--image {
+    max-width: 144px;
+}
+
+@media only screen and (max-width : 768px) and (min-width : 480px) {
+    .summary-table .cell--image {
+        max-width: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .summary-table .cell {
+        width: 100%;
+        display: inline-block;
+    }
+}
+
+.summary-table th:nth-child(4) {
+    padding: 16px 12px;
+    text-align: right;
+    @media @mobile {
+        text-align: left;
+    }
+}
+
+.quantity-field {
+    padding: 10px;
+}
+
+.order-total {
+    font-weight: 700;
+    color: @color-swatch4;
 }
