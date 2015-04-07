@@ -165,6 +165,46 @@
     }
 }
 
+// -----------------
+// Featured products
+// -----------------
+
+.ecomfeaturedproducts .listing-title {
+    padding: 1em 0 2em;
+}
+
+// One Product
+
+.ecomfeaturedproducts .products-1 {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    .product-item {
+        width: 100%;
+    }
+    .product-item-image {
+        background-color: transparent;
+        .image-link {
+            background-color: transparent;
+        }
+    }
+    .product-item-details {
+        background-color: transparent;
+        border: none;
+    }
+}
+
+// Two and Four Products
+
+.ecomfeaturedproducts .products-2,
+.ecomfeaturedproducts .products-4 {
+    .product-item {
+        width: 48%;
+        @media @mobile {
+            width: 100%;
+        }
+    }
+}
 
 // -----------------
 // Product Widget
@@ -413,7 +453,7 @@
 
 
 // -----------------------------
-// 3. #Basket Widget
+// Basket Widget
 // -----------------------------
 
 .basket-item {
@@ -521,7 +561,7 @@
 }
 
 // -----------------------------
-// 4. #Basket Summary
+// Basket Summary
 // -----------------------------
 
 
