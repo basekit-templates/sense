@@ -168,9 +168,16 @@
     }
 }
 
+
+
+
 // -----------------
 // Featured products
 // -----------------
+
+.ecomfeaturedproducts .product-list {
+    float: left;
+}
 
 .ecomfeaturedproducts .listing-title {
     padding: 1em 0 2em;
@@ -209,6 +216,9 @@
     }
 }
 
+
+
+
 // -----------------
 // Product Widget
 // -----------------
@@ -217,11 +227,11 @@
     float: left;
     height: auto;
     width: 100%;
+    margin: 40px 0 60px;
     background-color: @color-swatch7;
     -webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.15);
     -moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.15);
     box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.15);
-    margin: 40px 0 60px;
     @media @mobile {
         margin: 0;
         -webkit-box-shadow: none;
@@ -270,6 +280,7 @@
 
 .product-images,
 .product-content {
+    width: 50%;
     -webkit-box-ordinal-group: 1;
     -moz-box-ordinal-group: 1;
     -webkit-order: 0;
@@ -277,32 +288,26 @@
     order: 0;
     -webkit-box-flex: 0;
     -moz-box-flex: 0;
-    -webkit-flex: 0 0 50%;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
     -webkit-align-self: stretch;
     -ms-flex-item-align: stretch;
     align-self: stretch;
 }
 @media only screen and (max-width: 850px) {
     .product-images {
-        -webkit-flex: 0 0 40%;
-        -ms-flex: 0 0 40%;
-        flex: 0 0 40%;
+        width: 40%;
     }
     .product-content {
-        -webkit-flex: 0 0 60%;
-        -ms-flex: 0 0 60%;
-        flex: 0 0 60%;
+        width: 60%;
     }
 }
 
 @media only screen and (max-width: 700px) {
     .product-images,
     .product-content {
-        -webkit-flex: 0 0 100%;
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
+        width: 100%;
     }
 }
 
@@ -365,7 +370,7 @@
 
 .product-actions {
     display: inline-block;
-    margin: 40px 0;
+    margin: 40px 0 20px;
     width: 100%;
     @media @mobile {
         margin: 20px 0 0;
@@ -388,20 +393,20 @@
         background-color: transparent;
         margin-bottom: 10px;
         @media @mobile {
-            padding: 10px;
+            padding: 20px 20px 10px;
             margin: 0;
         }
     }
     .form-body {
         padding: 0;
         @media @mobile {
-            padding: 0 10px;
+            padding: 0 20px;
         }
     }
     .form-group {
-        margin: 30px 0;
+        margin: 20px 0;
         @media @mobile {
-            margin: 0 0 20px;
+            margin: 0 0 30px;
         }
     }
     select {
@@ -449,8 +454,6 @@
         margin-bottom: 20px;
     }
 }
-
-
 
 
 
@@ -562,6 +565,9 @@
 .view-basket {
     margin: 20px 0;
 }
+
+
+
 
 // -----------------------------
 // Basket Summary
