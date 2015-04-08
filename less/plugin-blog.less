@@ -377,18 +377,18 @@
 .sharing-links {
     button,
     .button {
-        background-color: transparent;
-        color: @color-swatch5;
         min-height: 20px;
         padding: 0;
         padding-right: 10px;
+        color: @color-swatch5;
+        background-color: transparent;
         border-right: 3px solid darken(@color-swatch7, 13%);
         &.icon--googleplus {
             padding-right: 0;
             border-right: none;
             @media only screen and (max-width : 600px) {
-                border: 3px solid darken(@color-swatch7, 13%);
                 padding: 5px 10px;
+                border: 3px solid darken(@color-swatch7, 13%);
             }
             @media @tablet {
                 margin-bottom: 0;
@@ -401,12 +401,12 @@
             color: @color-swatch2;
         }
         @media @tablet {
-            min-height: 44px;
             margin-bottom: 20px;
         }
         @media only screen and (max-width : 600px) {
-            border: 3px solid darken(@color-swatch7, 13%);
+            min-height: 44px;
             padding: 5px 10px;
+            border: 3px solid darken(@color-swatch7, 13%);
         }
     }
 }
