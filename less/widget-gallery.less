@@ -89,10 +89,20 @@
 
 // Gallery caption
 .gallery .caption {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
     margin: 0;
     padding: 20px;
-    background-color: hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(@color-swatch7), 0.8);
+    background-color: hsla(hue(@color-swatch7),
+                           saturation(@color-swatch7),
+                           lightness(@color-swatch7),
+                           0.8);
+    opacity: 0;
+    .transition( all, 0.5s, ease );
 }
 
 // Gallery show caption on hover
@@ -104,6 +114,7 @@
     bottom: 8px;
     display: block;
     width: auto;
+    opacity: 1;
     .transition( all, 0.5s, ease );
 }
 
@@ -125,6 +136,10 @@
         padding: 10px;
         // hide description on desktop
         @media only screen and (min-width: 768px) {
+            .image-title {
+                font-size: bkscale(@font-swatch5-font-size,0.8);
+                line-height: bkscale(@font-swatch5-line-height,0.8);
+            }
             .image-description {
                 display: none;
             }
