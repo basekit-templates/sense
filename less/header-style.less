@@ -374,8 +374,10 @@
 // Clears margin on ul, hides navigatio on mobile (made visible in conjunction with navigation-toggle)
 .navigation-list {
     margin: 0;
+    width: auto;
     @media @tablet {
         display: none;
+        width: 100%;
         &.open {
             display: block;
         }
@@ -392,6 +394,7 @@
 }
 .navigation-list--children {
         border: 1px solid darken(@color-swatch1, 10%);
+        white-space: normal;
     @media @tablet {
         border-top: 1px solid lighten(@color-swatch4, 10%);
         border-bottom: 1px solid lighten(@color-swatch4, 10%);
