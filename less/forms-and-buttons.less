@@ -92,11 +92,11 @@
 }
 
 .legend {
+    margin-bottom: 20px;
     font-size: @font-swatch3-font-size;
     font-weight: @font-swatch3-font-weight;
     line-height: @font-swatch3-line-height;
     color: @font-swatch3-color;
-    margin-bottom: 20px;
 }
 
 .contactform,
@@ -109,13 +109,13 @@
             position: absolute;
             top: -3px;
             left: 0;
-            font-size: 16px;
             height: 38px;
             width: 38px;
             line-height: 40px;
             text-align: center;
-            background-color: @font-swatch3-color;
+            font-size: 16px;
             color: #ffffff;
+            background-color: @font-swatch3-color;
         }
     }
 }
@@ -133,8 +133,8 @@
         width: 38px;
         line-height: 40px;
         text-align: center;
-        background-color: @font-swatch3-color;
         color: #ffffff;
+        background-color: @font-swatch3-color;
     }
 }
 
@@ -156,12 +156,13 @@
 // -----------------------------
 
 .template-footer .profile .signupform {
+    text-align: center;
     .form-body {
         margin: 0 auto;
     }
     .legend {
+        width: 100%;
         margin: 0 auto 10px;
-        position: relative;
         &:before {
             display: none;
             padding-left: 0;
@@ -185,8 +186,8 @@
             line-height: 42px;
             text-align: center;
             border: 1px solid #dddddd;
-            background-color: darken(@color-swatch1, 2%);
             color: @color-swatch4;
+            background-color: darken(@color-swatch1, 2%);
         }
     }
 }
@@ -227,8 +228,8 @@
         }
         .button {
             width: 100%;
-            text-align: center;
             margin-bottom: 10px;
+            text-align: center;
         }
     }
 }
@@ -332,9 +333,9 @@
 
 // Ecom Form Background Colour
 .ecomproductslist .form {
+    padding: 20px;
     background-color: darken(@color-swatch1, 3%);
     border: 1px solid darken(@color-swatch1, 5%);
-    padding: 20px;
 }
 
 // Hide Legend
