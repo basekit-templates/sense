@@ -186,21 +186,13 @@
 // One Product
 
 .ecomfeaturedproducts .products-1 {
+    width: 100%;
+    float: left;
     -webkit-column-count: 1;
     -moz-column-count: 1;
     column-count: 1;
     .product-item {
         width: 100%;
-    }
-    .product-item-image {
-        background-color: transparent;
-        .image-link {
-            background-color: transparent;
-        }
-    }
-    .product-item-details {
-        background-color: transparent;
-        border: none;
     }
 }
 
@@ -228,7 +220,7 @@
     height: auto;
     width: 100%;
     margin: 40px 0 60px;
-    background-color: @color-swatch7;
+    background-color: darken(@color-swatch7, 3%);
     -webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.15);
     -moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.15);
     box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.15);
@@ -320,7 +312,7 @@
     @media @mobile {
         padding: 10px;
         margin-bottom: 20px;
-        background-color: @color-swatch7;
+        background-color: darken(@color-swatch7, 3%);
     }
     .image-link {
         height: auto;
@@ -355,7 +347,7 @@
 // Product Content
 
 .product-content {
-    background-color: darken(@color-swatch7, 3%);
+    background-color: @color-swatch7;
     padding: 30px;
     @media only screen and (min-width: 900px) {
         display: inline-block;
