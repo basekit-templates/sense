@@ -450,7 +450,15 @@
 
 // Two Columns
 .columns-two-left,
-.columns-two-right,
+.columns-two-right {
+    .ecomproductslist .form .fieldset--search .button--clear {
+        margin-left: 20px;
+        @media @tablet {
+            margin-left: 0;
+        }
+    }
+}
+
 // Three Columns
 .columns-three-left,
 .columns-three-middle,
