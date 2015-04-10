@@ -269,11 +269,21 @@
     }
     // Ecom form - Same style as on Tablet
     .ecomproductslist .form { // Ecom Form
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
         -webkit-box-orient: vertical;
         -moz-box-orient: vertical;
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
         -webkit-box-pack: start;
         -moz-box-pack: start;
         -webkit-justify-content: flex-start;
@@ -411,11 +421,21 @@
 // Flexbox form on Tablet
 .ecomproductslist .form { // Ecom Form
     @media @tablet {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
         -webkit-box-orient: vertical;
         -moz-box-orient: vertical;
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
         -webkit-box-pack: start;
         -moz-box-pack: start;
         -webkit-justify-content: flex-start;
@@ -429,6 +449,12 @@
         -webkit-align-items: stretch;
         -ms-flex-align: stretch;
         align-items: stretch;
+        .fieldset--search,
+        .fieldset--filters {
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+        }
         .form-group:last-child {
             margin-right: 0;
         }
