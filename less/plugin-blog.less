@@ -217,14 +217,13 @@
     .image-link {
         overflow: hidden;
         max-height: 250px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
         @media @mobile {
             max-height: 200px;
         }
         .image {
-            display: none;
+            margin: 0 auto;
+            height: auto;
+            max-height: none;
         }
     }
     .post-list-footer {
