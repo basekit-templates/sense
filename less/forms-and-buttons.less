@@ -173,6 +173,7 @@
 }
 
 
+
 // Blog Search
 // -----------------------------
 
@@ -259,9 +260,14 @@
 // Two Columns
 .columns-two-left,
 .columns-two-right {
+    .signupform,// Signup
+    .blogsearch {// Blog
+        text-align: left;
+    }
     .signupform .form-body,// Signup
     .blogsearch .form-body {// Blog
         width: 100%;
+        margin: inherit;
         @media only screen and (max-width:1024px) {
             width: 100%;
         }
@@ -333,6 +339,10 @@
 .columns-four-second,
 .columns-four-third,
 .columns-four-fourth {
+    .signupform,// Signup
+    .blogsearch {// Blog
+        text-align: left;
+    }
     // Same style as Mobile
     .contactform,// Contact Form
     .signupform .form-body,// Signup
@@ -344,6 +354,7 @@
         display: inline-block;
         width: 100%;
         margin-right: 0;
+        margin: inherit;
         .input {
             margin-bottom: 10px;
         }
