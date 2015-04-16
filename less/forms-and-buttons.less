@@ -99,40 +99,19 @@
     color: @font-swatch3-color;
 }
 
-.contactform,
-.signupform {
-    .legend {
-        margin-left: 45px;
-        &:before {
-            content: "\F003";
-            font-family: 'FontAwesome', sans-serif;
-            position: absolute;
-            top: -3px;
-            left: 0;
-            height: 38px;
-            width: 38px;
-            line-height: 40px;
-            text-align: center;
-            font-size: 16px;
-            color: #ffffff;
-            background-color: @font-swatch3-color;
-        }
-    }
-}
-
-.blogsearch .legend {
+.contactform .legend {
     margin-left: 45px;
     &:before {
-        content: "\F002";
+        content: "\F003";
         font-family: 'FontAwesome', sans-serif;
         position: absolute;
-        top: -2px;
+        top: -3px;
         left: 0;
-        font-size: 16px;
         height: 38px;
         width: 38px;
         line-height: 40px;
         text-align: center;
+        font-size: 16px;
         color: #ffffff;
         background-color: @font-swatch3-color;
     }
@@ -152,10 +131,11 @@
 }
 
 
-// Profile Widget Form in Footer
-// -----------------------------
+// Profile Widget Form in Footer and Signup Widget
+// -----------------------------------------------
 
-.template-footer .profile .signupform {
+.template-footer .profile .signupform,
+.signupform {
     text-align: center;
     .form-body {
         margin: 0 auto;
@@ -193,6 +173,43 @@
 }
 
 
+// Blog Search
+// -----------------------------
+
+.blogsearch {
+    text-align: center;
+    .form-body {
+        margin: 0 auto;
+    }
+    .legend {
+        width: 100%;
+        margin: 0 auto 10px;
+    }
+    .label {
+        display: none;
+    }
+    .form-group:first-child {
+        padding-left: 44px;
+        position: relative;
+        &:before {
+            content: "\F002";
+            font-family: 'FontAwesome', sans-serif;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 16px;
+            height: 44px;
+            width: 44px;
+            line-height: 42px;
+            text-align: center;
+            border: 1px solid #dddddd;
+            color: @color-swatch4;
+            background-color: darken(@color-swatch1, 2%);
+        }
+    }
+}
+
+
 // Signup Form and Blog Search on Desktop & Tablet
 // ------------------------------------------------
 .signupform .form-body,// Signup
@@ -208,27 +225,6 @@
         width: 100%;
     }
 }
-
-// Blog Search
-// -----------------
-
-.blogsearch .legend {
-    margin: 0 auto 20px;
-    position: relative;
-    width: 100%;
-    text-align: center;
-    &:before {
-        position: relative;
-        padding: 10px 11px;
-        margin-right: 10px;
-    }
-}
-
-.blogsearch .form-body {
-    margin: 0 auto;
-}
-
-
 
 
 // Forms on Mobile
