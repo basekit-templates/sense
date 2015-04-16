@@ -253,16 +253,18 @@
     }
 }
 
-// Blog opacity style
+// Blog opacity style for Desktop
 .blogpostlist {
-    .post-article {
-        transition: opacity .2s;
-    }
-    .post-items:hover .post-article {
-        opacity: 0.6;
-    }
-    .post-items .post-article:hover {
-        opacity: 1;
+    @media only screen and (min-width : 768px) {
+        .post-article {
+            transition: opacity .2s;
+        }
+        .post-items:hover .post-article {
+            opacity: 0.6;
+        }
+        .post-items .post-article:hover {
+            opacity: 1;
+        }
     }
 }
 
