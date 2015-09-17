@@ -161,7 +161,7 @@
 .bk-pt-default .default-header-bottom-line {
         height: 1px;
         width: 100%;
-        background-color: darken(@color-swatch1, 8%);
+        background-color: darken(@color__body--background, 8%);
         margin-bottom: 30px;
 }
 
@@ -239,7 +239,7 @@
 
 // Social icons colour
 .social-link:before {
-    color: @color-swatch3;
+    color: @color__primary;
     font-size: 16px;
     margin-right: 10px;
     @media @tablet {
@@ -254,7 +254,7 @@
 .social-link:hover {
     text-decoration: none;
     &:before {
-        color: @color-swatch2;
+        color: @color__secondary;
         @media @tablet {
             color: lighten(@color-swatch4, 40%);
         }
@@ -273,13 +273,13 @@
     content: "";
     margin-left: 4px;
     border: 5px solid transparent;
-    border-top-color: @font-swatch6-color;
+    border-top-color: @color__navigation-item--text;
     @media @tablet {
         border-top-color: @color-swatch7;
     }
 }
 .item-name--parent:hover:after {
-    border-top-color: @font-swatch6-color-hover;
+    border-top-color: @color__navigation-item--selected;
     @media @tablet {
         border-top-color: lighten(@color-swatch4, 40%);
     }
@@ -288,7 +288,7 @@
 // Selected nav item
 
 .navigation-item.selected > .item-name {
-    color: @color-swatch2;
+    color: @color__navigation-item--selected;
     @media @tablet {
         color: lighten(@color-swatch4, 40%);
     }
@@ -358,7 +358,7 @@
             width: 26px;
             margin-top: 21px;
             margin-left: -4px;
-            background: @color-swatch1;
+            background: @color__body--background;
             box-shadow: none;
             -webkit-transform: rotate(45deg);
             -moz-transform: rotate(45deg);
@@ -377,7 +377,7 @@
             right: 0;
             margin-top: 21px;
             margin-left: -4px;
-            background: @color-swatch1;
+            background: @color__body--background;
             box-shadow: none;
             -webkit-transform: rotate(-45deg);
             -moz-transform: rotate(-45deg);
@@ -414,7 +414,7 @@
     left: inherit;
     right: 0;
     white-space: normal;
-    border: 1px solid darken(@color-swatch1, 10%);
+    border: 1px solid darken(@color__body--background, 10%);
     @media @tablet {
         border-top: 1px solid lighten(@color-swatch4, 10%);
         border-bottom: 1px solid lighten(@color-swatch4, 10%);
@@ -423,7 +423,7 @@
     }
     .navigation-item--child {
         @media only screen and (min-width:770px) {
-            border-bottom: 1px solid darken(@color-swatch1, 5%);
+            border-bottom: 1px solid darken(@color__body--background, 5%);
             &:last-child {
                 border-bottom: none;
             }
@@ -438,7 +438,7 @@
     }
 }
 
-.navigation-item .item-name {
+.extendednavigation .item-name {
     padding: 4px 12px;
     @media @tablet {
         padding-top: 8px;
@@ -479,7 +479,7 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
 }
 
 .company-link:hover {
-    color: @color-swatch2;
+    color: @color__secondary;
     text-decoration: none;
 }
 

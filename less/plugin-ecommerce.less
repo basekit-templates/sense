@@ -85,11 +85,11 @@
 }
 
 .product-item-title a {
-    color: @color-swatch3;
+    color: @color__primary;
     font-size: bkscale(@font-swatch3-font-size,0.8);
     line-height: bkscale(@font-swatch3-line-height,0.8);
         &:hover {
-            color: @color-swatch2;
+            color: @color__secondary;
             text-decoration: none;
         }
 }
@@ -101,7 +101,7 @@
 .product-gallery .gallery-item,
 .product-image .image-link,
 .basket-item-image .image-link {
-    background-color: darken(@color-swatch1, 3%);
+    background-color: darken(@color__body--background, 3%);
 }
 
 // Footer
@@ -122,7 +122,7 @@
         border-radius: 50px;
     }
     .pagination-item.current .button {
-        background-color: @color-swatch2;
+        background-color: @color__secondary;
     }
     .pagination-item:last-child {
         .button--pagination {
@@ -223,7 +223,7 @@
     height: auto;
     width: 100%;
     margin: 40px 0 60px;
-    background-color: lighten(@color-swatch1, 3%);
+    background-color: lighten(@color__body--background, 3%);
     -webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.15);
     -moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.15);
     box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.15);
@@ -372,6 +372,7 @@
     }
 }
 .product-actions .form {
+    background-color: @color-swatch7;
     &:first-child {
         @media @mobile {
             margin-bottom: 20px;
@@ -460,7 +461,7 @@
 .basket-item {
     position: relative;
     padding-bottom: 20px;
-    border-bottom: 1px solid darken(@color-swatch1, 8%);
+    border-bottom: 1px solid darken(@color__body--background, 8%);
 }
 
 // Display basket image and content inline
@@ -550,7 +551,7 @@
 
 .basket-total {
     padding-bottom: 20px;
-    border-bottom: 1px solid darken(@color-swatch1, 8%);
+    border-bottom: 1px solid darken(@color__body--background, 8%);
 }
 
 // View Basket Button
@@ -579,15 +580,15 @@
 .summary-table {
     border: none;
     @media @mobile {
-        border: 1px solid darken(@color-swatch1, 10%);
+        border: 1px solid darken(@color__body--background, 10%);
     }
     width: 100%;
     th {
-        background-color: lighten(@color-swatch1, 3%);
+        background-color: lighten(@color__body--background, 3%);
     }
     th,
     td {
-        border: 1px solid darken(@color-swatch1, 5%);
+        border: 1px solid darken(@color__body--background, 5%);
     }
     tr:last-child td {
         border: none;

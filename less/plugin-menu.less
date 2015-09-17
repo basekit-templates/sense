@@ -25,31 +25,31 @@
     margin-right: 10px;
     a {
         font-family: @font-swatch6-font-family;
-        color: @color-swatch3;
+        color: @color__primary;
         font-size: @font-swatch6-font-size;
         font-weight: @font-swatch6-font-weight;
         line-height: @font-swatch6-line-height;
         &:hover {
-            color: @color-swatch2;
+            color: @color__secondary;
             text-decoration: none;
         }
     }
     @media only screen and (max-width: 550px) {
         padding: 15px 0 10px 0;
         width: 100%;
-        border-bottom: 1px solid darken(@color-swatch1,7%);
+        border-bottom: 1px solid darken(@color__body--background,7%);
     }
     &:last-child {
         margin-right: 0;
         @media only screen and (max-width: 550px) {
-            border-bottom: 1px solid darken(@color-swatch1,7%);
+            border-bottom: 1px solid darken(@color__body--background,7%);
         }
     }
     // Dash after menu item
     &:after {
         content: '\2044';
         padding-left: 8px;
-        color: darken(@color-swatch1, 10%);
+        color: darken(@color__body--background, 10%);
         @media only screen and (max-width: 550px) {
             content: '';
             padding-left: 0;
@@ -92,7 +92,7 @@
     padding: 25px 0 40px;
     margin-bottom: 20px;
     text-align: center;
-    border-bottom: 1px solid darken(@color-swatch1, 8%);
+    border-bottom: 1px solid darken(@color__body--background, 8%);
     .section-title {
         display: inline-block;
     }
@@ -140,7 +140,7 @@
 }
 
 .item-footer {
-    background-color: lighten(@color-swatch1, 3%);
+    background-color: lighten(@color__body--background, 3%);
     padding: 20px;
 
     .item-subtitle, .item-details, .dietary-item {
@@ -154,7 +154,7 @@
     &:before {
         content: "\2713";
         margin-right: 0;
-        color: @color-swatch2;
+        color: @color__secondary;
     }
 }
 

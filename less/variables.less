@@ -1,33 +1,424 @@
-// ---------
-// variables
-// ---------
+// Metadata variables
 
-// Colour swatches
-// -------------------
-@bg-color:        @color-swatch1; // Background
-@contrast-color:  @color-swatch2; // Contrast Color
-@button-color:    @color-swatch3; // Button BG Color
-@heading-color:   @color-swatch4; // Heading Text Color (H1 - H4)
-@paragraph-color: @color-swatch5; // Paragraph Text Color
-@nav-color:       @color-swatch6; // Nav Link Color
-@spare-color:     @color-swatch7; // Spare Color
+// colors
+@color__primary: @color-swatch3;
+@color__secondary: @color-swatch2;
+
+// site
+@color__body--background: @color-swatch1;
+@color__container--background: @color-swatch1;
+@color__link--text: @color__secondary;
+@color__companyname--text: @color__primary;
+
+// typography
+@color__h1--text: @color-swatch4;
+@color__h1--background: transparent;
+@color__h2--text: @color-swatch4;
+@color__h2--background: transparent;
+@color__h3--text: @color-swatch4;
+@color__h3--background: transparent;
+@color__h4--text: @color-swatch5;
+@color__h4--background: transparent;
+@color__p--text: @color-swatch5;
+@color__p--background: transparent;
+
+// button
+@color__button--background: @color__primary;
+@color__button--background--hover: @color__secondary;
+@color__button--text: @color-swatch7;
+
+// header
+@color__header--background: @color-swatch1;
+
+// footer
+@color__footer--background: @color-swatch1;
+
+// navigation
+@color__navigation--background: @color-swatch1;
+@color__navigation--text: @color-swatch6;
+@color__navigation--text--hover: @color__secondary;
+@color__navigation--text--selected: @color__secondary;
+@color__navigation-list--background: @color-swatch1;
+@color__navigation-item--text: @color-swatch6;
+@color__navigation-item--selected: @color__secondary;
+
+// forms
+@color__form--background: @color-swatch1;
+@color__form-legend--text: @color-swatch4;
+@color__form-legend--background: @color-swatch1;
+@color__form-label--text: @color-swatch5;
+
+// image
+@color__image--background: transparent;
+@color__image-caption--background: transparent;
+@color__image-title--text: @color-swatch4;
+@color__image-description--text: @color-swatch5;
+
+// gallery
+@color__gallery--background: transparent;
+@color__gallery-caption--background: @color-swatch1;
+@color__gallery-title--text: @color-swatch4;
+@color__gallery-description--text: @color-swatch5;
+
+// slideshow
+@color__slideshow--background: transparent;
+@color__slideshow-caption--background: @color-swatch5;
+@color__slideshow-title--text: @color-swatch7;
+@color__slideshow-description--text: @color-swatch7;
+@color__slideshow-pagination-item--background: fadeout(darken(@color-swatch5, 30%), 30%);
+@color__slideshow-pagination-item--background--selected: @color-swatch7;
+@color__slideshow-pagination-item--text: @color-swatch7;
+
+// twitter
+@color__twitter--background: transparent;
+@color__twitter-item--background: transparent;
+@color__twitter-account-name--background: @color__secondary;
+
+// socialicons
+@color__socialicons--icon: @color__primary;
+@color__socialicons--icon--background: transparent;
+@color__socialicons--text: @color__primary;
+
+// blog
+@color__blogsearch-legend--text: @color-swatch4;
+@color__blogsearch-label--text: @color-swatch4;
+@color__blogpostlist-title--text: @color-swatch4;
+@color__blogpost-title--text: @color-swatch4;
+
+// ecommerce
+@color__ecomproductslist--background: transparent;
+@color__ecomproductslist-filters--background: transparent;
+@color__ecomproductslist-legend--background: transparent;
+@color__ecomproductslist-legend--text: @color-swatch4;
+@color__ecomproductslist-label--text: @color-swatch4;
+@color__ecomproductslist-product-list--background: transparent;
+@color__ecomproductslist-product-item--background: transparent;
+@color__ecomproductslist-product-title--background: transparent;
+@color__ecomproductslist-product-title--text: @color-swatch4;
+@color__ecomproduct--background: transparent;
+@color__ecomproduct-images--background: transparent;
+@color__ecomproduct-content--background: transparent;
+@color__ecomproduct-title--background: transparent;
+@color__ecomproduct-title--text: @color-swatch4;
+@color__ecomproduct-price--background: transparent;
+@color__ecomproduct-price--text: @color-swatch4;
+@color__ecombasket--background: transparent;
+@color__ecombasket-list--background: transparent;
+@color__ecombasket-button--background: @color__primary;
+@color__ecombasket-button--background--hover: @color__secondary;
+@color__ecombasket-button--text: @color-swatch7;
+
+// menu
+@color__menusections--background: transparent;
+@color__menu--background: transparent;
+@color__menu-item--background: @color-swatch1;
+@color__menu-section-header--background: transparent;
+@color__menu-section-featured--background: @color-swatch2;
 
 
-
-// -----------------------------
-// 3. #Mixins
-// -----------------------------
-
-.transition (@prop: all, @time: 0.5s, @ease: ease) {
-    -webkit-transition: @prop @time @ease;
-    -moz-transition:    @prop @time @ease;
-    -ms-transition:     @prop @time @ease;
-    -o-transition:      @prop @time @ease;
-    transition:         @prop @time @ease;
+// Template colour overrides
+body {
+	background-color: @color__body--background;
 }
 
-.border-radius (@radius: 3px) {
-    -webkit-border-radius: @radius;
-    -moz-border-radius: @radius;
-    border-radius: @radius;
+.template-content {
+	background-color: @color__container--background;
+}
+
+.company-link {
+	color: @color__companyname--text;
+}
+
+a {
+	color: @color__link--text;
+}
+
+h1 {
+	color: @color__h1--text;
+	background-color: @color__h1--background;
+}
+
+h2 {
+	color: @color__h2--text;
+	background-color: @color__h2--background;
+}
+
+h3 {
+	color: @color__h3--text;
+	background-color: @color__h3--background;
+}
+
+h4 {
+	color: @color__h4--text;
+	background-color: @color__h4--background;
+}
+
+p {
+	color: @color__p--text;
+	background-color: @color__p--background;
+}
+
+button,
+.button {
+	background-color: @color__button--background;
+	color: @color__button--text;
+	&:hover {
+		background-color: @color__button--background--hover;
+	}
+}
+
+.template-header {
+	background-color: @color__header--background;
+}
+
+.template-footer {
+	background-color: @color__footer--background;
+}
+
+#page-zones__template-widgets__image-sidebarimage {
+	background-color: @color__sidebar--background;
+}
+
+.extendednavigation {
+	background-color: @color__navigation--background;
+	@media @tablet {
+		background-color: @color-swatch4;
+	}
+	&__navigation-body {
+		background-color: @color__navigation-list--background;
+		@media @tablet {
+			background-color: @color-swatch4;
+		}
+	}
+	&__item-name.item-name {
+		color: @color__navigation-item--text;
+		&:hover {
+			color: @color__navigation-item--selected;
+		}
+	}
+	&__navigation-item.selected {
+		color: @color__navigation-item--selected;
+		@media @tablet {
+	        color: lighten(@color-swatch4, 40%);
+	    }
+	}
+	.navigation-list--children {
+		background-color: @color-swatch1;
+		@media @tablet {
+			background-color: @color-swatch4;
+		}
+	}
+}
+
+.feature {
+	background-color: @color__feature--background;
+	&__content-wrap {
+		background-color: @color__feature-content--background;
+	}
+	&__headline {
+		background-color: @color__feature-headline--background;
+		color: @color__feature-headline--text;
+	}
+	&__strapline {
+		background-color: @color__feature-strapline--background;
+		color: @color__feature-strapline--text;
+	}
+	&__button {
+		background-color: @color__feature-button--background;
+		color: @color__feature-button--text;
+		&:hover {
+			background-color: @color__feature-button--background--hover;
+		}
+	}
+}
+
+form,
+.form {
+	background-color: @color__form--background;
+	legend,
+	.legend {
+		background-color: @color__form-legend--background;
+		color: @color__form-legend--text;
+	}
+	label,
+	.label {
+		color: @color__form-label--text;
+	}
+}
+
+.imagewidget {
+	background-color: @color__image--background;
+	&__caption {
+		background-color: @color__image-caption--background;
+	}
+	&__image-title {
+		color: @color__image-title--text;
+	}
+	&__image-description {
+		color: @color__image-description--text;
+	}
+}
+
+.gallery {
+	background-color: @color__gallery--background;
+	&__caption.caption {
+		.gradient(fadeout(@color__gallery-caption--background, 100%), fadeout(@color__gallery-caption--background, 0%));
+	}
+	&__image-title.image-title {
+		color: @color__gallery-title--text;
+	}
+	&__image-description.image-description {
+		color: @color__gallery-description--text;
+	}
+}
+
+.responsiveslideshow {
+	background-color: @color__slideshow--background;
+	&__caption.caption {
+		.gradient(fadeout(@color__slideshow-caption--background, 100%), fadeout(@color__slideshow-caption--background, 0%));
+	}
+	&__image-title.image-title {
+		color: @color__slideshow-title--text;
+	}
+	.caption .image-title {
+		color: @color__slideshow-title--text;
+	}
+	&__image-description.image-description {
+		color: @color__slideshow-description--text;
+	}
+	.caption .image-description {
+		color: @color__slideshow-title--text;
+	}
+	.button--pagination {
+		background-color: @color__slideshow-pagination-item--background;
+		color: @color__slideshow-pagination-item--background--selected;
+	}
+	.selected .button--pagination {
+		background-color: @slideshow__pagination-item-bg-color--selected;
+	}
+}
+
+.twitter {
+	background-color: @color__twitter--background;
+	&__tweet-item {
+		background-color: @color__twitter-item--background;
+	}
+	&__account-link {
+		color: @color__twitter-account-name--background;
+	}
+}
+
+.socialicons {
+	&__social-link {
+		background-color: @color__socialicons--icon--background;
+		&::before {
+			color: @color__socialicons--icon;
+		}
+	}
+}
+
+.blogsearch {
+	background-color: @color__blogsearch--background;
+	&__legend.legend {
+		background-color: @color__blogsearch-legend--background;
+		color: @color__blogsearch-legend--text;
+	}
+	&__label.label {
+		color: @color__blogsearch-label--text;
+	}
+}
+
+.blogpost {
+	background-color:  @color__blogpost--background;
+	&__post-article {
+		background-color: @color__blogpost-article--background;
+	}
+	&__post-title {
+		background-color: @color__blogpost-title--background;
+		color: @color__blogpost-title--text;
+	}
+}
+
+.ecomproductslist,
+.ecomfeaturedproducts {
+	background-color: @color__ecomproductslist--background;
+	&__product-filters {
+		background-color: @color__ecomproductslist-filters--background;
+	}
+	&__legend.legend {
+		background-color: @color__ecomproductslist-legend--background;
+		color: @color__ecomproductslist-legend--text;
+	}
+	&__label.label {
+		color: @color__ecomproductslist-label--text;
+	}
+	&__product-list {
+		background-color: @color__ecomproductslist-product-list--background;
+	}
+	&__product-item {
+		background-color: @color__ecomproductslist-product-item--background;
+	}
+	&__product-item-title .title-link {
+		background-color: @color__ecomproductslist-product-title--background;
+		color: @color__ecomproductslist-product-title--text;
+	}
+	.product-item-image .image-link {
+		background-color: darken(@color-swatch1, 3%);
+	}
+}
+
+.ecomproduct {
+	background-color: @color__ecomproduct--background;
+	&__image-link.image-link,
+	&__gallery-item.gallery-item {
+		background-color: @color__ecomproduct-images--background;
+	}
+	&__product-content {
+		background-color: @color__ecomproduct-content--background;
+	}
+	&__product-title {
+		background-color: @color__ecomproduct-title--background;
+		color: @color__ecomproduct-title--text;
+	}
+	&__product-price {
+		background-color: @color__ecomproduct-price--background;
+		color: @color__ecomproduct-price--text;
+	}
+	.view-basket-wrap .button {
+		background-color: @color__button--background--hover;
+	    &:hover {
+	        background-color: @color__button--background;
+	    }
+	}
+}
+.ecombasket {
+	background-color: @color__ecombasket--background;
+	&__basket-list {
+		background-color: @color__ecombasket-list--background;
+	}
+	button.button {
+		background-color: @color__ecombasket-button--background;
+		color: @color__ecombasket-button--text;
+		&:hover {
+			background-color: @color__ecombasket-button--background--hover;
+		}
+	}
+}
+
+.menusections {
+	background-color: @color__menusections--background;
+}
+
+.menu {
+	background-color: @color__menu--background;
+	.menu-item {
+		.item-image .image-link {
+			background-color: transparent;
+		}
+		&--featured {
+			.item-image .image-link {
+				background-color: transparent;
+			}
+		}
+	}
 }

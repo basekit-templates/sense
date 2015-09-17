@@ -1,0 +1,17 @@
+// -----------------------------
+// #Mixins
+// -----------------------------
+
+.transition (@prop: all, @time: 0.5s, @ease: ease) {
+    -webkit-transition: @prop @time @ease;
+    -moz-transition:    @prop @time @ease;
+    -ms-transition:     @prop @time @ease;
+    -o-transition:      @prop @time @ease;
+    transition:         @prop @time @ease;
+}
+
+.border-radius (@radius: 3px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
