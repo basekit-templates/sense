@@ -273,13 +273,13 @@
     content: "";
     margin-left: 4px;
     border: 5px solid transparent;
-    border-top-color: @color__navigation-item--text;
+    border-top-color: @color__navigation--text
     @media @tablet {
         border-top-color: @color-swatch7;
     }
 }
 .item-name--parent:hover:after {
-    border-top-color: @color__navigation-item--selected;
+    border-top-color: @color__navigation--text--selected;
     @media @tablet {
         border-top-color: lighten(@color-swatch4, 40%);
     }
@@ -288,7 +288,7 @@
 // Selected nav item
 
 .navigation-item.selected > .item-name {
-    color: @color__navigation-item--selected;
+    color: @color__navigation--text--selected;
     @media @tablet {
         color: lighten(@color-swatch4, 40%);
     }
