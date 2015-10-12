@@ -201,13 +201,8 @@
             "color__image-title--text": "@font-swatch3-color",
             "color__image-description--text": "@font-swatch5-color"
         },
-        "twitter": {
-            "color__twitter-item--background": "darken(@color__body--background, 2%)"
-        },
         "socialicons": {
-            "color__socialicons--icon": "@color-swatch1",
-            "color__socialicons--icon--background": "transparent"
-        },
+            "color__socialicons--icon": "@color-swatch1"        },
         "blog": {
             "color__blogsearch-legend--text": "@color__form-legend--text",
             "color__blogpostlist-article--background": "transparent",
