@@ -205,7 +205,6 @@
             "color__socialicons--icon": "@color-swatch1"        },
         "blog": {
             "color__blogsearch-legend--text": "@color__form-legend--text",
-            "color__blogpostlist-article--background": "transparent",
             "color__blogpostlist-title--text": "@color__secondary",
             "color__blogpost-article--background": "transparent",
             "color__blogpost-title--text": "@font-swatch1-color"
