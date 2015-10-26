@@ -225,9 +225,9 @@
         "navigation": {
             "color__navigation--text": "@font-swatch6-color",
             "color__navigation--text--hover": "@font-swatch6-color-hover",
-            "color__navigation--text--selected": "@font-swatch6-color-hover",
-            "font__navigation--font-family" : "@font-swatch6-font-family",
+            "color__navigation--text--selected": "@color__primary",
 
+            "font__navigation--font-family" : "@font-swatch6-font-family",
             "font__navigation--font-size" : "@font-swatch6-font-size",
             "font__navigation--font-weight" : "@font-swatch6-font-weight",
             "font__navigation--line-height" : "@font-swatch6-line-height",
@@ -253,32 +253,37 @@
             "font__feature-strapline--letter-spacing" : "@font-swatch9-letter-spacing"
         },
         "forms": {
-            "color__form-legend--text": "@font-swatch3-color",
-            "color__form-label--text": "@font-swatch3-color"
+            "color__form--background": "darken(@color__body--background, 3%)",
+            "color__form-legend--text": "darken(@font-swatch5-color, 4%)",
+            "color__form-legend--background": "darken(@color__body--background, 6%)",
+            "color__form-label--text": "@font-swatch5-color"
         },
         "image": {
             "color__image-title--text": "@font-swatch3-color",
             "color__image-description--text": "@font-swatch5-color"
         },
+        "twitter": {
+            "color__twitter-item--background": "darken(@color__body--background, 2%)"
+        },
         "socialicons": {
-            "color__socialicons--icon": "@color-swatch1"        },
+            "color__socialicons--icon": "@color-swatch1",
+            "color__socialicons--icon--background": "@font-swatch6-color"
+        },
         "blog": {
+            "color__blogsearch-legend--background": "@color__form-legend--background",
             "color__blogsearch-legend--text": "@color__form-legend--text",
+            "color__blogpostlist-article--background": "transparent",
             "color__blogpostlist-title--text": "@color__secondary",
-            "color__blogpost-article--background": "@color-swatch7",
+            "color__blogpost-article--background": "transparent",
             "color__blogpost-title--text": "@font-swatch1-color"
         },
         "ecommerce": {
             "color__ecomproductslist-label--text": "@color__form-label--text",
-            "color__ecomproductslist-product-item--background": "transparent",
             "color__ecomproductslist-product-title--text": "@font-swatch3-color",
-            "color__ecomproduct--background": "transparent",
+            "color__ecomproduct--background": "darken(@color__body--background, 3%)",
             "color__ecomproduct-images--background": "transparent",
-            "color__ecomproduct-content--background": "transparent",
             "color__ecomproduct-title--text": "@font-swatch1-color",
             "color__ecomproduct-price--text": "@font-swatch3-color",
-            "color__ecombasket--background": "transparent",
-            "color__ecombasket-list--background": "transparent",
             "color__ecombasket-button--background": "@color__primary",
             "color__ecombasket-button--background--hover": "@color__secondary",
             "color__ecombasket-button--text": "@font-swatch3-color"
