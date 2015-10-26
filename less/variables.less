@@ -116,19 +116,22 @@ button,
 			color: @color__navigation--text--hover;
 		}
 	}
+	.navigation-item.selected .item-name {
+		color: @color__navigation--text--selected;
+	}
 	.navigation-list--children {
 		background-color: @color__body--background;
 	}
 }
 
 .feature {
-	&__headline {
+	.headline {
 		color: @color__feature-headline--text;
 	}
-	&__strapline {
+	.strapline {
 		color: @color__feature-strapline--text;
 	}
-	&__button {
+	.button {
 		background-color: @color__feature-button--background;
 		color: @color__feature-button--text;
 		&:hover {
