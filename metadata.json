@@ -167,7 +167,7 @@
         "site": {
             "color__body--background": "@color-swatch1",
             "color__link--text": "@color__secondary",
-            "color__companyname--text": "@font-swatch10-color",
+            "color__companyname--text": "color__primary",
 
             "font__companyname--font-family" : "@font-swatch10-font-family",
             "font__companyname--font-size" : "@font-swatch10-font-size",
