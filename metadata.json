@@ -238,7 +238,7 @@
             "color__form-label--text": "@font-swatch3-color"
         },
         "image": {
-            "color__image-title--text": "@font-swatch3-color",
+            "color__image-title--text": "@font-swatch8-color",
             "color__image-description--text": "@font-swatch5-color"
         },
         "socialicons": {
