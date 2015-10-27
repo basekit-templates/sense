@@ -76,7 +76,7 @@
 }
 
 .product-item-article {
-    background-color: @color-swatch7;
+    background-color: @color__ecomproductslist-product-item--background;
 }
 
 .product-item-details {
@@ -85,7 +85,7 @@
 }
 
 .product-item-title a {
-    color: @color__primary;
+    color: @color__ecomproductslist-product-title--text;
     font-size: bkscale(@font-swatch3-font-size,0.8);
     line-height: bkscale(@font-swatch3-line-height,0.8);
         &:hover {
@@ -223,7 +223,7 @@
     height: auto;
     width: 100%;
     margin: 40px 0 60px;
-    background-color: lighten(@color__body--background, 3%);
+    background-color: @color__ecomproduct--background;
     -webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.15);
     -moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.15);
     box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.15);
@@ -312,6 +312,7 @@
     float: left;
     margin:0;
     padding: 30px;
+    background-color: @color__ecomproduct-images--background;
     @media @mobile {
         padding: 10px;
         margin-bottom: 20px;
@@ -350,7 +351,7 @@
 // Product Content
 
 .product-content {
-    background-color: @color-swatch7;
+    background-color: @color__ecomproduct-content--background;
     padding: 30px;
     @media only screen and (min-width: 900px) {
         display: inline-block;
@@ -358,6 +359,15 @@
     @media @mobile {
         padding: 0;
         background-color: transparent;
+    }
+}
+
+.ecomproduct {
+    .product-title {
+        color: @color__ecomproduct-title--text;
+    }
+    .product-price {
+        color: @color__ecomproduct-price--text;
     }
 }
 

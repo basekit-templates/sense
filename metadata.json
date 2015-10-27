@@ -252,18 +252,13 @@
         },
         "ecommerce": {
             "color__ecomproductslist-label--text": "@color__form-label--text",
-            "color__ecomproductslist-product-item--background": "transparent",
-            "color__ecomproductslist-product-title--text": "@font-swatch3-color",
-            "color__ecomproduct--background": "transparent",
+            "color__ecomproductslist-product-item--background": "@color-swatch7",
+            "color__ecomproductslist-product-title--text": "@color__primary",
+            "color__ecomproduct--background": "lighten(@color__body--background, 3%)",
             "color__ecomproduct-images--background": "transparent",
-            "color__ecomproduct-content--background": "transparent",
+            "color__ecomproduct-content--background": "@color-swatch7",
             "color__ecomproduct-title--text": "@font-swatch1-color",
-            "color__ecomproduct-price--text": "@font-swatch3-color",
-            "color__ecombasket--background": "transparent",
-            "color__ecombasket-list--background": "transparent",
-            "color__ecombasket-button--background": "@color__primary",
-            "color__ecombasket-button--background--hover": "@color__secondary",
-            "color__ecombasket-button--text": "@font-swatch3-color"
+            "color__ecomproduct-price--text": "@font-swatch1-color"
         }
     }
 }
