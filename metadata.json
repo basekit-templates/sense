@@ -2,7 +2,7 @@
     "name": "sense-v8",
     "widgetVersion":2,
     "thumbnail": "thumbnail.png",
-    "screenshot": "screenshot.jpg",
+    "screenshot": "sense-screenshot.jpg",
     "templateType":"blog",
     "pageTypes": ["home"],
     "tags": {
