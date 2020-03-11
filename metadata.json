@@ -1,5 +1,6 @@
 {
     "name": "Sense",
+    "versionTenCompatible": 1,
     "widgetVersion":2,
     "thumbnail": "thumbnail.png",
     "screenshot": "sense-screenshot.jpg",
