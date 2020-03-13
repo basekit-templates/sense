@@ -36,7 +36,6 @@
     // Migration styles
     // -----------------------------
     
-    
     // Replace with corresponding template values
     @container-width: 100%;
     
@@ -131,10 +130,21 @@
     #page-zones__main > .widget:not([data-name="row"]) + [data-name="row"] {
       margin-bottom: @spacing--other;
       margin-top: @spacing--other;
+      
+      background-color: red !important;
     
       &:not(:last-child) {
            margin-bottom: 0;
       }
+    }
+    
+    .ecomproduct__form button, a {
+        float: none;
+    }
+    
+    .paypal-button-container, .ecomproduct__paypal-commerce-button-container {
+        padding: 20px 0;
+        width: 48%;
     }
     
     
